@@ -20,7 +20,7 @@ function App() {
                     <Link to="main">Main</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about">Hello Nikitka</Link>
                 </li>
             </ul>
 
