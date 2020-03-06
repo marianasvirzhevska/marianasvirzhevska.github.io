@@ -1,2 +1,2 @@
-# hyperion
-Team project
+npm i
+npm start
