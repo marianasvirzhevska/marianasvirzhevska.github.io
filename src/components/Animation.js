@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Transition } from 'react-transition-group';
 import { gsap } from 'gsap';
 import StarfieldAnimation from 'react-starfield-animation';
-import background from '../styles/stars.jpg';
+import background from '../styles/Rectangle_1.png';
 
 export default class Animation extends Component {
 
@@ -13,7 +13,7 @@ export default class Animation extends Component {
   
       componentDidMount() {
         // Added timeout
-        const ANIMATION_TIMEOUT = 5000;
+        const ANIMATION_TIMEOUT = 8000;
     
         setTimeout(() => {
           this.setState({ animate: true });
@@ -21,13 +21,35 @@ export default class Animation extends Component {
       }
 
 
-    _animatedStatusBarEnter = (composer) => {
+    _animatedName = (composer) => {
+        
+        gsap.fromTo(composer,
+            8,
+            { opacity: 0,
+                letterSpacing: 'normal'}, 
+            { opacity: 1,
+                letterSpacing: '0.5em', 
+                delay: 4 });
+        
+    };
+
+    _animatedSubName = (composer) => {
+        
+        gsap.fromTo(composer,
+            2,
+            { opacity: 0,}, 
+            { opacity: 1,
+                delay: 7 });
+        
+    };
+
+    _animatedPctr = (composer) => {
         gsap.fromTo(composer,
             10,
-            { opacity: 0,
-            rotationX: 90 }, 
+            { opacity: 0, }, 
             { opacity: 1,
-            rotationX: 0 });
+                delay: 2
+                 },);
     };
 
     
@@ -37,45 +59,81 @@ export default class Animation extends Component {
         
 
         return (
-            
+            <Transition 
+        in
+        appear
+        timeout = { 1000 }
+        onEnter = { this._animatedPctr }>
             <div
         style={{
+          position: 'fixed',
+          zIndex: 1,
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           background: `url(${background})`,
           backgroundSize: 'stretch',
           minHeight: '100vh',
           display: 'flex',
+          flexDirection:'column',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          flexWrap:'wrap'
         }}
       >
         
         <Transition 
         in
         appear
-        
-        onEnter = { this._animatedStatusBarEnter }>
+        timeout = { 1000 } 
+        onEnter = { this._animatedName}>
         <h1
           style={{
             color: '#fff',
-            fontSize: '3em',
+            fontSize: '5em',
             fontFamily: 'Quicksand, "Helvetica Neue", sans-serif',
-            textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)'
+            textShadow: '4px 4px 10px rgba(0, 0, 0, 0.9)',
+            width: '100%',
+            textAlign: 'center',
+            margin:'0',
+            
           }}
         >
-          React Starfield Animation
+          HYPERION
         </h1>
+                </Transition>
+                <Transition 
+        in
+        appear
+        timeout = { 1000 } 
+        onEnter = { this._animatedSubName}>
+        <h2
+          style={{
+            color: '#fff',
+            fontSize: '1em',
+            fontFamily: 'Quicksand, "Helvetica Neue", sans-serif',
+            textShadow: '4px 4px 10px rgba(0, 0, 0, 0.9)',
+            letterSpacing: '0.5em',
+            width: '100%',
+            textAlign: 'center',
+            margin:'0'
+          }}
+        >
+          Interactive Movie
+        </h2>
                 </Transition>
         
                 
           <StarfieldAnimation
-          numParticles={this.state.animate ? 500 : 0}
+          numParticles={500}
+          alphaFactor={this.state.animate ? 500 : 0}
           style={{
+            opacity: '0.3',
             position: 'absolute',
             zIndex: 1,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0
+            width: '1000px',
+            height: '1000px'
           }}
         />
           
@@ -83,6 +141,7 @@ export default class Animation extends Component {
           
         
       </div>
+      </Transition>
         )
     }
 }
