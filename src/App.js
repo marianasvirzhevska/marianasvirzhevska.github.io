@@ -17,7 +17,7 @@ function App() {
             {/*temp nav*/}
             <ul>
                 <li>
-                    <Link to="main">Main</Link>
+                    <Link to="/main">Main</Link>
                 </li>
                 <li>
                     <Link to="/about">About</Link>
