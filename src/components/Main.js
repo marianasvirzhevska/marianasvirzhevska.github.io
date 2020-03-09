@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import story_1 from '../assets/images/story-1.jpg';
 import story_2 from '../assets/images/story-2.jpg';
 import story_3 from '../assets/images/story-3.jpg';

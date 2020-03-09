@@ -9,7 +9,6 @@ import About from './components/About';
 import PersonInfo from './components/PersonInfo';
 import Footer from './components/Footer';
 
-
 function App() {
 
     return (
