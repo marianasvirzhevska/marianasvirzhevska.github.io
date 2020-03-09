@@ -3,36 +3,25 @@ import {
     BrowserRouter as Router,
     Route,
     Redirect,
-    Switch,
-    Link } from 'react-router-dom';
+    Switch } from 'react-router-dom';
 import Main from './components/Main';
 import About from './components/About';
 import PersonInfo from './components/PersonInfo';
+import Footer from './components/Footer';
+
 
 function App() {
 
     return (
     <div className="App">
         <Router>
-            {/*temp nav*/}
-            <ul>
-                <li>
-                    <Link to="/main">Main</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
-            </ul>
-
             <Switch>
                 <Route  path='/main' component={Main}/>
                 <Route exact path='/about' component={About}/>
                 <Route exact path='/person-info/:id' component={PersonInfo}/>
                 <Redirect exact path='/' to='/main'/>
             </Switch>
-
-            {/*footer as react component*/}
-            {/*<Footer />*/}
+            <Footer />
         </Router>
     </div>
   );

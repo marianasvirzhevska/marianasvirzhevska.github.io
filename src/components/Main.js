@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
+
 import story_1 from '../assets/images/story-1.jpg';
 import story_2 from '../assets/images/story-2.jpg';
 import story_3 from '../assets/images/story-3.jpg';
@@ -64,7 +64,6 @@ function Main() {
                     <Link to="/about" className="story-start__btn">Start journey</Link>
                 </div>
             </section>
-            <Footer/>
         </>
     )
 }
