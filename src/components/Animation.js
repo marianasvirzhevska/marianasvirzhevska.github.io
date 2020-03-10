@@ -11,14 +11,7 @@ export default class Animation extends Component {
     };
 
 
-    componentDidMount() {
-        // Added timeout
-        const ANIMATION_TIMEOUT = 8000;
-
-        setTimeout(() => {
-            this.setState({ animate: true });
-        }, ANIMATION_TIMEOUT);
-    }
+    
 
 
     _animatedName = (composer) => {
@@ -32,7 +25,7 @@ export default class Animation extends Component {
             {
                 opacity: 1,
                 letterSpacing: '0.5em',
-                delay: 4
+                delay: 2
             });
 
     };
@@ -44,14 +37,14 @@ export default class Animation extends Component {
             { opacity: 0, },
             {
                 opacity: 1,
-                delay: 7
+                delay: 5
             });
 
     };
 
     _animatedPctr = (composer) => {
         gsap.fromTo(composer,
-            10,
+            5,
             { opacity: 0, },
             {
                 opacity: 1,
@@ -134,9 +127,8 @@ export default class Animation extends Component {
 
                     <StarfieldAnimation
                         numParticles={500}
-                        alphaFactor={this.state.animate ? 500 : 0}
                         style={{
-                            opacity: '0.3',
+                            opacity: '1',
                             position: 'absolute',
                             zIndex: 1,
                             width: '1000px',
