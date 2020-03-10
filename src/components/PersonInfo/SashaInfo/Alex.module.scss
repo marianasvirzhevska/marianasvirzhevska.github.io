@@ -1,16 +1,17 @@
-.alexBg {
-    background: url('../assets/images/planet-alex.jpg') center top no-repeat;
+.main {
+    background: url('../../../assets/images/planet-alex.jpg') center top no-repeat;
     background-size: cover;
     min-height: 100vh;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .character {
-    background-color: rgba(0,0,0,0.45);
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
     margin-bottom: 30px;
     max-width: 450px;
     color: #fff;
-    padding: 25px;
+    padding: 70px 25px 25px 25px;
 
     &Photo {
         width: 200px;
@@ -30,7 +31,7 @@
     &Appearance {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
 
     &AppearanceItem {
@@ -49,7 +50,7 @@
     }
 
     &MainText {
-        background-color: rgba(0,0,0,0.6);
+        background-color: rgba(0,0,0,0.5);
         color: #fff;
         padding: 25px;
     }
