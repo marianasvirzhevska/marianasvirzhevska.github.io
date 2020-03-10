@@ -1,7 +1,53 @@
 import React from "react";
 import styles from "./index.module.scss";
 
-var animatedBoxes = [...Array(7).keys()];
+let boxesStyle = [
+    {
+        left: '86%',
+        width: '80px',
+        height: '80px',
+        'animation-delay': '0s'
+    },
+    {
+        left: '2%',
+        width: '30px',
+        height: '30px',
+        'animation-delay': '1.5s',
+        'animation-duration': '10s'
+    },
+    {
+        left: '70%',
+        width: '100px',
+        height: '100px',
+        'animation-delay': '7.5s'
+    },
+    {
+        left: '40%',
+        width: '150px',
+        height: '150px',
+        'animation-delay': '7.5s',
+        'animation-duration': '20s'
+    },
+    {
+        left: '65%',
+        width: '40px',
+        height: '40px'
+    },
+    {
+        left: '8%',
+        width: '110px',
+        height: '110px',
+        'animation-delay': '3.5s'
+    },
+    {
+        left: '95%',
+        width: '40px',
+        height: '40px',
+        'animation-delay': '1.5s',
+        'animation-duration': '10s'
+    }
+];
+
 
 function KateInfo() {
     return (
@@ -36,22 +82,28 @@ function KateInfo() {
                     plan was interrupted by message from Hyperion. Who knows
                     maybe the book will turn out even better than planned.
                 </p>
-                <p className={styles.paragraph}>
-                    Core skills: Primary: focus on the audience. Since Ashley is
+                <p className={styles.paragraph + ' ' + styles.primary}>Primary skill: focus on the audience. Since Ashley is
                     used to be the center of attention she knows, if the
-                    audience is pleasured you will be treated right --
-                    incredible memory -- she can become the center of attention
-                    in any situation -- play with all kinds of instruments -- at
-                    first she DOES, then she thinks.
-                </p>
+                    audience is pleasured you will be treated right.</p>
+                <p className={styles.paragraph}>Core skills: </p>
+                <ul className={styles.skills}>
+                    <li>incredible memory;</li>
+                    <li>she can become the center of attention
+                in any situation;</li>
+                    <li>play with all kinds of instruments;</li>
+                    <li>at first she DOES, then she thinks.</li>
+                </ul>
+                <p className={styles.paragraph}></p>
                 <ul className={styles.box_area}>
-                    {animatedBoxes.map(el => (
-                        <li>{el}</li>
+                    {boxesStyle.map((el, index) => (
+                        <li style={el}></li>
                     ))}
                 </ul>
             </div>
         </div>
     );
 }
+
+
 
 export default KateInfo;
