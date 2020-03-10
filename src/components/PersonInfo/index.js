@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteMatch } from 'react-router';
 import { team } from '../../team';
+import KateInfo from './KateInfo';
 // import RomanInfo from './RomanInfo';
 
 function PersonInfo() {
@@ -27,6 +28,10 @@ function PersonInfo() {
             {/* How to add your own component to existing layout? */}
             {member.name === 'Aleksandr' ? (
                 <p>Your additional component will be here</p>
+            ): null}
+
+            {member.name === 'Kateryna' ? (
+                <KateInfo/>
             ): null}
         </div>
     )
