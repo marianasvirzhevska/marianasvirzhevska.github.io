@@ -1,0 +1,47 @@
+$bgHeader: #171963;
+$colorHeader: #dfdfe8;
+
+
+.accordian {
+    max-width: 80%;
+    display: block;
+    margin: 10%;
+
+        &__card {
+            box-shadow: 0px 0px 20px ;
+            margin-bottom: 10%;
+            width: 100%;
+        }
+}
+
+.accordian__header {
+    cursor: pointer;
+    position: relative;
+    background-color: $bgHeader;
+    padding: 5%;
+
+
+        &_title {
+            color: $colorHeader;
+        }
+}
+
+.accordian__header_titleActive {
+    color: green;
+}
+
+.accordian__body {
+    padding: 5%;
+    display: block;
+
+     &_p {
+         font-size: 1rem;
+         line-height: 2rem;
+         color: black;
+         margin: 1%;
+     }
+}
+
+.active {
+    background: green;
+}
