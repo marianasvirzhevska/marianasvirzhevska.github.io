@@ -29,7 +29,7 @@
 }
 
 .imageWrapper {
-    // flex: 0 0.35 35%;
+    flex: 0 0.35 35%;
     position: relative;
     @media(max-width: 768px) {
         max-height: 350px;
