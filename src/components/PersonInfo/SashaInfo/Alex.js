@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Alex.module.scss';
 
 function Main() {
     return (
         <>
-            <div className={styles.alexBg}>
-                <div className="container">
+            <div className={styles.main}>
+                <div className={`container ${styles.relative}`}>
                     <div className={styles.character}>
+                        <Link to="/main" className="back-button"><span/>Back</Link>
                         <div className={styles.characterPhoto}></div>
                         <h3 className={styles.characterName}>Alex Callisto</h3>
                         <p className={styles.characterOccupetion}>Scholar and professor</p>
