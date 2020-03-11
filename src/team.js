@@ -89,20 +89,20 @@ export const team = [
         id: '5', 
         name: 'Aleksandr', 
         surname: 'Bezdorozhev', 
-        page: false, 
-        role: 'role', 
+        page: true, 
+        role: 'Scholar and professor', 
         character: 'Alex Callisto',
         image: alex,
-        info: 'A Jewish scholar and professor from Barnard\'s World',
+        info: 'A scholar and professor from Barnard\'s World',
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Additional info not available', 
-            indent: 'P 108574.LU.00.104', 
+            height: 180, 
+            weight: 176, 
+            hair: 'Red', 
+            eyes: 'Grey', 
+            other: 'Not available', 
+            indent: 'P 383011.AC.00.843', 
             linkedin: 'link', 
-            github: 'https://github.com/marianasvirzhevska'
+            github: 'https://github.com/lightcraf'
         }
     }
 ];
