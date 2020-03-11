@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { team } from '../../team';
 // import RomanInfo from './RomanInfo';
 import styles from './index.module.scss';
-import video from '../../assets/video/alex.mp4'
+import video from '../../assets/video/alex.mp4';
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -12,6 +12,19 @@ function PersonInfo() {
     const member = team.find(member => member.id === id);
     const { name, surname, role, character, details } = member;
     const { height, weight, hair, eyes, other, indent, linkedin, github } = details;
+
+    const playVideo = ({target}) => {
+        target.play();
+    };
+
+    const pauseVideo = ({target}) => {
+        target.currentTime = 0;
+        target.pause();
+    };
+
+    const videoEnded = ({target}) => {
+        target.currentTime = 0;
+    };
 
     if (member.page) {
         return (
@@ -31,7 +44,10 @@ function PersonInfo() {
                         <div className={styles.imageWrapper}>
                             <div className={styles.bracketsTop}/> 
                             <div className={styles.image}>
-                                <video src={video}></video>
+                                <video src={video} className={styles.video}
+                                       onMouseEnter={playVideo}
+                                       onMouseLeave={pauseVideo}
+                                       onEnded={videoEnded}/>
                             </div>
                             <div className={styles.bracketsBottom}/> 
                         </div>
@@ -88,8 +104,7 @@ function PersonInfo() {
                     </div>
                 </div>
             </div>
-        
-         
+
      
             {member.name === 'Aleksandr' ? (
                 <p>Your additional component will be here</p>
