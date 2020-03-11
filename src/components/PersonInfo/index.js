@@ -17,7 +17,6 @@ function PersonInfo() {
         return (
             <>
                 Put your personalize page here
-                <RomanInfo />
             </>
         )
     }
@@ -91,6 +90,10 @@ function PersonInfo() {
     
             {member.name === 'Aleksandr' ? (
                 <p>Your additional component will be here</p>
+            ): null}
+
+            {member.name === 'Roman' ? (
+                <RomanInfo />
             ): null}
         </div>
     )

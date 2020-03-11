@@ -1,47 +1,155 @@
 $bgHeader: #171963;
 $colorHeader: #dfdfe8;
 
+@keyframes show {
+	0% {
+	opacity: 0;
+	transform: scale(0.8);
+	}
+	100% {
+	opacity: 1;
+	transform: scale(1.0);
+	}
+}
+
+@keyframes slider {
+	from, to, 40% {
+		background-image:url(./images/medinfo-1.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	50%, 90% {
+		background-image:url(./images/medinfo-2.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerAccordian {
+    margin: 5% 0 0 5%;
+    width: 40%;
+}
+
+.containerGallery {
+    margin: 5% 5% 5% 5%;
+    width: 40%;
+}
 
 .accordian {
-    max-width: 80%;
+    max-width: 100%;
     display: block;
-    margin: 10%;
+    margin: 5% 0 5% 0;
+    
 
         &__card {
-            box-shadow: 0px 0px 20px ;
-            margin-bottom: 10%;
+            box-shadow: 0px 0px 20px;
             width: 100%;
         }
 }
 
 .accordian__header {
-    cursor: pointer;
+    max-width: 100%;
     position: relative;
-    background-color: $bgHeader;
-    padding: 5%;
+    padding: 2%;
+    background-color: black;
 
+        &.blue {
+            cursor: pointer;
+            background-color: $bgHeader;
+        }
+
+        &.black {
+            background-color: black;
+        }
 
         &_title {
+            margin: 0;
             color: $colorHeader;
+            text-align: center;
         }
 }
 
-.accordian__header_titleActive {
-    color: green;
-}
-
 .accordian__body {
+    max-width: 100%;
     padding: 5%;
     display: block;
+    animation: show 2s ease;
 
      &_p {
          font-size: 1rem;
-         line-height: 2rem;
+         line-height: 1.5rem;
          color: black;
          margin: 1%;
      }
 }
 
-.active {
-    background: green;
+.accordian__bodyImage {
+    animation: slider 10s infinite cubic-bezier(.76,-0.54,.27,.76);
+	width: 100%;
+	height: 50vh;
+}
+
+
+
+
+@media (max-width: 1024px) {
+
+    .accordian__header {
+        padding: 2%;
+    }
+    
+    .accordian__body {
+        padding: 3%;
+    
+         &_p {
+             font-size: .9rem;
+             line-height: 1.3rem;
+             color: black;
+             margin: .8%;
+         }
+    }
+    
+    .accordian__bodyImage {
+        padding: 0;
+    }
+    
+    .accordian__bodyImage_img {
+        max-width: 40%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordian__header {
+        padding: 2%;
+    
+            &_title {
+                font-size: .8em;
+                text-align: center;
+            }
+    }
+    
+    .accordian__body {
+        padding: 2%;
+    
+         &_p {
+             font-size: .6rem;
+             line-height: 1.1rem;
+             color: black;
+             margin: .8%;
+         }
+    }
+    
+    .accordian__bodyImage {
+        padding: 0;
+    }
+    
+    .accordian__bodyImage_img {
+        max-width: 40%;
+    }
 }

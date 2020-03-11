@@ -1,16 +1,11 @@
 import React, {useState} from 'react'
 import styles from './Roman.module.scss'
-import medinfo_1 from './images/medinfo-1.jpg'
-import medinfo_2 from './images/medinfo-2.jpg'
-import medinfo_3 from './images/medinfo-3.jpg'
-import medinfo_4 from './images/medinfo-4.jpg'
 
 function RomanInfo(){
 
     const [openOne, setOpenOne] = useState(false)
     const [openTwo, setOpenTwo] = useState(false)
-    const [openThree, setOpenThree] = useState(false)
-    const [openFour, setOpenFour] = useState(false)
+    const [openThree, setOpenThree] = useState(true)
 
     function toggleAccordionOne() {
         setOpenOne(!openOne);
@@ -24,16 +19,12 @@ function RomanInfo(){
         setOpenThree(!openThree);
     }
 
-    function toggleAccordionFour() {
-        setOpenFour(!openFour);
-    }
-
     return(
-        <div className={styles.container}>
-
+    <div className={styles.container}>
+        <div className={styles.containerAccordian}>  
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}  onClick={toggleAccordionOne}>
+                <div className={`${styles.accordian__header} ${openOne ? styles.black : styles.blue}`}  onClick={toggleAccordionOne}>
                     <h3 className={styles.accordian__header_title}>Biography</h3>
                 </div>
                 {
@@ -56,7 +47,7 @@ function RomanInfo(){
 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}  onClick={toggleAccordionTwo}>
+                <div className={`${styles.accordian__header} ${openTwo ? styles.black : styles.blue}`}  onClick={toggleAccordionTwo}>
                     <h3 className={styles.accordian__header_title}>Work</h3>
                 </div>
                 {
@@ -86,7 +77,7 @@ function RomanInfo(){
 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}  onClick={toggleAccordionThree}>
+                <div className={`${styles.accordian__header} ${openThree ? styles.black : styles.blue}`}  onClick={toggleAccordionThree}>
                     <h3 className={styles.accordian__header_title}>Skills</h3>
                 </div>
                 {
@@ -103,31 +94,20 @@ function RomanInfo(){
                     ) : null
                 }
                 
-            </div>
+            </div>    
         </article>
-
+        </div>  
+        
+        <div className={styles.containerGallery}> 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}  onClick={toggleAccordionFour}>
+                <div className={styles.accordian__header}>
                     <h3 className={styles.accordian__header_title}>Gallery</h3>
                 </div>
-                {
-                    openFour ? (
-                        <div className={styles.accordian__body}>
-                        <img 
-                        className={styles.accordian__body_image}
-                        src={medinfo_1}
-                        />
-                        <img 
-                        className={styles.accordian__body_image}
-                        src={medinfo_2}
-                        />
-                </div>
-                    ) : null
-                }
-                
+                    <div className={styles.accordian__bodyImage}></div>
             </div>
         </article>
+        </div>
 
         </div>
     )

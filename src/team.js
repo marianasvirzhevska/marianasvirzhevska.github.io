@@ -69,20 +69,20 @@ export const team = [
         id: '4', 
         name: 'Roman',
         surname: 'Tsakhlo', 
-        page: true,  
-        role: 'role', 
-        character: '', 
+        page: false,  
+        role: 'Developer of syntetic heart', 
+        character: 'Christoff Amoscott', 
         image: roman,
-        info: 'Lenar Hoyt was a Jesuit priest, famous for his role in the final Shrike pilgrimage',
+        info: 'Christoff works in staff of Developing Syntetic Cardiovascular System Department. He develops a syntetic heart.',
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Additional info not available', 
-            indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
-            github: 'https://github.com/marianasvirzhevska'
+            height: 184, 
+            weight: 137, 
+            hair: 'Blonde', 
+            eyes: 'Green', 
+            other: 'Christoff develops a syntetic heart', 
+            indent: 'P 108574.CA.00.104', 
+            linkedin: 'https://www.linkedin.com/in/roman-tsakhlo-37a1b1167/', 
+            github: 'https://github.com/roma-bjj'
         }
     },
     {
