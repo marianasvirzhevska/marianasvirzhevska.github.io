@@ -1,11 +1,11 @@
 .wrapper {
     background: linear-gradient(to bottom, rgb(53, 87, 86), rgb(6, 37, 33));
-    padding: 50px;
+    padding: 70px;
     position: relative;
 }
 
 .container {
-    padding: 10px 50px;
+    padding: 50px;
     background-color: rgba(250, 237, 237, 0.822);
     box-shadow: 10px 10px 10px rgb(27, 27, 27);
 }
@@ -40,8 +40,51 @@
     }
 
     100% {
-        transform: translateY(-800px) rotate(360deg);
+        transform: translateY(-1200px) rotate(360deg);
         opacity: 0;
+    }
+}
+.pie_chart{
+    display: flex;
+    justify-content: center;
+
+    .pie {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 40px;
+    
+        border: 2px solid #fff;
+        box-shadow: 0 0 10px rgb(27, 27, 27);
+    
+        background-origin: border-box;
+    
+        background-image: conic-gradient(
+            #d44 72deg,
+            #fc3 0 234deg,
+            #ac0 0
+        );
+    }
+
+    .pie_denotation{
+        min-width: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-left: 30px;
+
+        .denotation_color{
+            width: 30px;
+            height: 20px;
+            display: inline-block;
+            border: 2px solid #fff;
+
+            &+.paragraph{
+                padding-left: 10px;
+                font-size: 18px;
+            }
+        }
     }
 }
 

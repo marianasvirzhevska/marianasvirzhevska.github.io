@@ -179,7 +179,7 @@
     margin-right: 30px; 
 
     &:hover{
-        color: $light-font;
+        transform: scale(1.1);
         text-shadow: black 10px 5px 5px;
     }
 
