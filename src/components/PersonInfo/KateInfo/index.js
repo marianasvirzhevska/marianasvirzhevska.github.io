@@ -26,7 +26,7 @@ let boxesStyle = [
         width: '150px',
         height: '150px',
         'animation-delay': '7.5s',
-        'animation-duration': '20s'
+        'animation-duration': '25s'
     },
     {
         left: '65%',
