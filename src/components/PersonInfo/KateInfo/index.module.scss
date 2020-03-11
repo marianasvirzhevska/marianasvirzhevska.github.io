@@ -1,5 +1,5 @@
 .wrapper {
-    background: linear-gradient(to bottom, rgb(82, 90, 136), rgb(9, 0, 54));
+    background: linear-gradient(to bottom, rgb(53, 87, 86), rgb(6, 37, 33));
     padding: 50px;
     position: relative;
 }
@@ -60,15 +60,7 @@
 
     li:before {
         content: "\203A";
-        color: white;
-        background-color: rgb(16, 17, 73);
-        border-radius: 50%;
-        padding: 0 2px 3px 2px;
+        color: black;
         margin-right: 10px;
-
-        &:hover {
-            padding: 0 100px 3px 4px;
-            background: rgb(204, 0, 0);
-        }
     }
 }

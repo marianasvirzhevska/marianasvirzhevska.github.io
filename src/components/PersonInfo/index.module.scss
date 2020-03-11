@@ -1,0 +1,189 @@
+@import '../../styles/_fonts.scss';
+@import '../../styles/_variables.scss';
+
+.personal {}
+
+.hero {
+    min-height: 700px;
+    background: url("../../assets/images/person-info-bg.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    & > div {
+        position: relative;
+    }
+}
+
+.container {}
+
+.back {}
+
+.infoCard {
+    display: flex;
+    padding: 100px 0 60px;
+    color: $white;
+    justify-content: space-between;
+    @media(max-width: 460px) {
+        flex-direction: column;
+        padding: 80px 0 40px;
+    }
+}
+
+.imageWrapper {
+    flex: 0 0.35 35%;
+    position: relative;
+    @media(max-width: 768px) {
+        max-height: 350px;
+    }
+    @media(max-width: 460px) {
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.bracketsTop, .bracketsBottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    &::before, &::after {
+        display: block;
+        content: ' ';
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        background: url('../../assets/images/frame.svg') center no-repeat;
+        background-size: contain;
+        @media(max-width: 460px) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+.bracketsTop {
+    top: -10px;
+    &::before {
+        left: -10px;
+        transform: rotate(270deg);
+    }
+    &::after {
+        right: -10px;
+    }
+}
+
+.bracketsBottom {
+    bottom: 36px;
+    &::before {
+        left: -10px;
+        transform: rotate(180deg);
+    }
+    &::after {
+        right: -10px;
+        transform: rotate(90deg);
+    }
+    @media(max-width: 460px) {
+        bottom: 21px;
+    }
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background: grey;
+    @media(max-width: 460px) {
+        min-height: 280px;
+    }
+}
+
+.infoTable {
+    flex: 0 0.60 60%;
+    padding-left: 40px;
+    @media(max-width: 460px) {
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
+}
+
+.infoTitle {
+    padding-bottom: 30px;
+    margin: 0;
+    @media(max-width: 460px) {
+        padding-bottom: 18px;
+    }
+}
+
+.character {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Space Mono", sans-serif;
+    @media(max-width: 768px) {
+        font-size: 32px;
+    }
+    @media(max-width: 460px) {
+        font-size: 28px;
+    }
+}
+
+.role {
+    font-size: 24px;
+    margin: 14px 0;
+    @media(max-width: 460px) {
+        font-size: 18px;  
+        margin: 8px 0;
+    }
+}
+
+.actor {
+    margin: 0;
+    font-size: $main-font;
+    color: $light-font;
+}
+
+.table {}
+
+.row {
+    display: flex;
+    padding: 15px 0;
+    @media(max-width: 768px) {
+        padding: 10px 0;
+    }
+}
+
+.halfColumn {
+    flex: 0 0.5 50%;
+}
+
+.column {
+    flex: 0 0 100%;
+}
+
+.tdHeader {
+    text-transform: uppercase;
+    font-family: "Work Sans", sans-serif;
+    color: #E5E5E5;
+    font-weight: 300; 
+    font-size: $large-font;
+    padding-bottom: 10px;
+}
+
+.tdCell {
+    color: $white;
+    font-size: $large-font;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.link {
+    color: $white;
+    text-decoration: underline;
+    margin-right: 30px; 
+
+    &:hover{
+        color: $light-font;
+        text-shadow: black 10px 5px 5px;
+    }
+
+    &:active{
+        color: $dark-font;
+    }
+}
