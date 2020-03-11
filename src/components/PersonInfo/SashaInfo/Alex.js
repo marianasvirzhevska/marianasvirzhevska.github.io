@@ -1,46 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Alex.module.scss';
+import video from '../../../assets/video/alex.mp4'
 
-function Main() {
+function Alex(props) {
+    console.log(props);
     return (
         <>
             <div className={styles.main}>
-                <div className={`container ${styles.relative}`}>
-                    <Link to="/main" className="back-button">Back</Link>
-                    <div className={styles.character}>
+                <div className={`container ${styles.mainWrapper}`}>
+                    <Link to="/main" className="back-button"><span></span>Back</Link>
+                    <div className={`${styles.character} ${styles.slideInDown} ${styles.animated}`}>
                         <div className={styles.characterWrapper}>
-                            <div className={styles.characterPhoto}></div>
+                            <video src={video} className={styles.characterVideo}></video>
                         </div>
                         <div className={styles.characterWrapper}>
-                            <h3 className={styles.characterName}>Alex Callisto</h3>
-                            <p className={styles.characterOccupetion}>Scholar and professor</p>
+                            <h3 className={styles.characterName}>{props.member.character}</h3>
+                            <p className={styles.characterOccupetion}>{props.member.role}</p>
+                            <p className={styles.characterRealName}>{props.member.name} {props.member.surname}</p>
                             <ul className={styles.characterAppearance}>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Height:</p>
-                                    <p className={styles.characterDataValue}>180 cm</p>
+                                    <p className={styles.characterDataValue}>{props.details.height} cm</p>
                                 </li>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Weight:</p>
-                                    <p className={styles.characterDataValue}>180 lbs</p>
+                                    <p className={styles.characterDataValue}>{props.details.weight} lbs</p>
                                 </li>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Hair color:</p>
-                                    <p className={styles.characterDataValue}>Red</p>
+                                    <p className={styles.characterDataValue}>{props.details.hair}</p>
                                 </li>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Eye color:</p>
-                                    <p className={styles.characterDataValue}>Gray</p>
+                                    <p className={styles.characterDataValue}>{props.details.eyes}</p>
                                 </li>
                             </ul>
                             <p className={styles.characterDataProp}>Other identifying data:</p>
-                            <p className={styles.characterDataValue}>Not available</p>
+                            <p className={styles.characterDataValue}>{props.details.other}</p>
                             <p className={styles.characterDataProp}>Identification NO.:</p>
-                            <p className={styles.characterDataValue}>P383011.AC.00.843</p>
+                            <p className={styles.characterDataValue}>{props.details.indent}</p>
+                            <p className={styles.characterDataProp}>Related links:</p>
+                            <p className={styles.characterDataValue}>
+                                <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>GitHub</a>
+                                <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>Linkedin</a>
+                            </p>
                         </div>
                     </div>
-
-                    <div className={styles.characterMainText}>
+                    
+                    <div className={`${styles.characterMainText} ${styles.slideInUp} ${styles.animated}`}>
                         <p className={styles.characterText}>Dr. Alex Callisto obtained his
                             Ph.D. in the Department of Physics at the Bristol University.
                             Alex has served as a lead scientist for 25 years in the physics
@@ -68,4 +76,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default Alex;
