@@ -5,6 +5,7 @@ import { team } from '../../team';
 // import RomanInfo from './RomanInfo';
 import styles from './index.module.scss';
 import video from '../../assets/video/alex.mp4'
+import Alex from './SashaInfo/Alex';
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -16,8 +17,9 @@ function PersonInfo() {
     if (member.page) {
         return (
             <>
-                Put your personalize page here
+                {/* Put your personalize page here */}
                 {/*<RomanInfo />*/}
+                <Alex member={member} details={details} />
             </>
         )
     }
