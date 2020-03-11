@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.447d26f7.chunk.css",
+    "main.js": "/static/js/main.ecf4dd7a.chunk.js",
+    "main.js.map": "/static/js/main.ecf4dd7a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.17e22230.js",
+    "runtime-main.js.map": "/static/js/runtime-main.17e22230.js.map",
+    "static/js/2.1c3f11e7.chunk.js": "/static/js/2.1c3f11e7.chunk.js",
+    "static/js/2.1c3f11e7.chunk.js.map": "/static/js/2.1c3f11e7.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.63b583a2d524bab7b9da7bd8be703644.js": "/precache-manifest.63b583a2d524bab7b9da7bd8be703644.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.447d26f7.chunk.css.map": "/static/css/main.447d26f7.chunk.css.map",
+    "static/js/2.1c3f11e7.chunk.js.LICENSE.txt": "/static/js/2.1c3f11e7.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/team-hero-bg.e597f3cd.png",
+    "static/media/alex.mp4": "/static/media/alex.8de35d26.mp4",
+    "static/media/index.module.scss": "/static/media/person-info-bg.cde0e930.jpg",
+    "static/media/member-1.png": "/static/media/member-1.0b731078.png",
+    "static/media/member-2.png": "/static/media/member-2.3100260e.png",
+    "static/media/member-3.png": "/static/media/member-3.ee10701c.png",
+    "static/media/member-4.png": "/static/media/member-4.5e6a254b.png",
+    "static/media/member-5.png": "/static/media/member-5.97a4f956.png",
+    "static/media/Alex.module.scss": "/static/media/planet-alex.ea96a631.jpg",
+    "static/media/story-1.jpg": "/static/media/story-1.1d6ed25d.jpg",
+    "static/media/story-2.jpg": "/static/media/story-2.beeae8dd.jpg",
+    "static/media/story-3.jpg": "/static/media/story-3.d6499d25.jpg",
+    "static/media/story-4.jpg": "/static/media/story-4.521900d2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17e22230.js",
+    "static/js/2.1c3f11e7.chunk.js",
+    "static/css/main.447d26f7.chunk.css",
+    "static/js/main.ecf4dd7a.chunk.js"
+  ]
+}
