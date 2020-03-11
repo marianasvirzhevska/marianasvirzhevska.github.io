@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteMatch } from 'react-router';
 import { team } from '../../team';
+import RomanInfo from './RomanInfo';
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -11,6 +12,7 @@ function PersonInfo() {
         <div>
             PersonInfo
             {member.name}
+            <RomanInfo />
         </div>
     )
 }

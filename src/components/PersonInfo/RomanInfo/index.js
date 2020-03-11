@@ -7,10 +7,25 @@ import medinfo_4 from './images/medinfo-4.jpg'
 
 function RomanInfo(){
 
-    const [setActive, setActiveState] = useState('')
+    const [openOne, setOpenOne] = useState(false)
+    const [openTwo, setOpenTwo] = useState(false)
+    const [openThree, setOpenThree] = useState(false)
+    const [openFour, setOpenFour] = useState(false)
 
-    function toggleAccordion() {
-        setActiveState(setActive === 'accordian__header' ? '.active' : 'accordian__header')
+    function toggleAccordionOne() {
+        setOpenOne(!openOne);
+    }
+
+    function toggleAccordionTwo() {
+        setOpenTwo(!openTwo);
+    }
+
+    function toggleAccordionThree() {
+        setOpenThree(!openThree);
+    }
+
+    function toggleAccordionFour() {
+        setOpenFour(!openFour);
     }
 
     return(
@@ -18,28 +33,35 @@ function RomanInfo(){
 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={setActive} onClick={toggleAccordion}>
+                <div className={styles.accordian__header}  onClick={toggleAccordionOne}>
                     <h3 className={styles.accordian__header_title}>Biography</h3>
                 </div>
-                <div className={styles.accordian__body}>
-                    <p className={styles.accordian__body_p}>Christoff Amoscott is 33 years old.</p>
-                    <p className={styles.accordian__body_p}>He was only child in a family. 
-                            The family consisted of two people: his mother Mary and he. 
-                            He never seen his father, 
-                            because the father had loosed a contact with planets of their galaxy 
-                            during important mission of intergalactic relationships. 
-                            His mother had serious heart desease. 
-                            When he was young, she died. He was stayed alone...</p>
-                </div>
+                {
+                    openOne ? (
+                        <div className={styles.accordian__body}>
+                        <p className={styles.accordian__body_p}>Christoff Amoscott is 33 years old.</p>
+                        <p className={styles.accordian__body_p}>He was only child in a family. 
+                                The family consisted of two people: his mother Mary and he. 
+                                He never seen his father, 
+                                because the father had loosed a contact with planets of their galaxy 
+                                during important mission of intergalactic relationships. 
+                                His mother had serious heart desease. 
+                                When he was young, she died. He was stayed alone...</p>
+                    </div> 
+                    ) : null
+                }
+                
             </div>
         </article>
 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}>
+                <div className={styles.accordian__header}  onClick={toggleAccordionTwo}>
                     <h3 className={styles.accordian__header_title}>Work</h3>
                 </div>
-                <div className={styles.accordian__body}>
+                {
+                    openTwo ? (
+                        <div className={styles.accordian__body}>
                     <p className={styles.accordian__body_p}>When he was 27 years old, 
                             he graduated from Unic University and achieve speciality 
                             Master in Medical Information.</p>
@@ -56,15 +78,20 @@ function RomanInfo(){
                             Can he find his father? 
                             Everything depends on you!</p>
                 </div>
+                    ) : null
+                }
+                
             </div>
         </article>
 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}>
+                <div className={styles.accordian__header}  onClick={toggleAccordionThree}>
                     <h3 className={styles.accordian__header_title}>Skills</h3>
                 </div>
-                <div className={styles.accordian__body}>
+                {
+                    openThree ? (
+                        <div className={styles.accordian__body}>
                     <p className={styles.accordian__body_p}>Core skills:</p>
                     <p className={styles.accordian__body_p}>Primary:</p>
                     <p className={styles.accordian__body_p}>Act as a team. Christoff is a good team player.</p>
@@ -73,15 +100,20 @@ function RomanInfo(){
                     <p className={styles.accordian__body_p}>--manage time </p>
                     <p className={styles.accordian__body_p}>--always uses unclear scientific terms</p>
                 </div>
+                    ) : null
+                }
+                
             </div>
         </article>
 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}>
+                <div className={styles.accordian__header}  onClick={toggleAccordionFour}>
                     <h3 className={styles.accordian__header_title}>Gallery</h3>
                 </div>
-                <div className={styles.accordian__body}>
+                {
+                    openFour ? (
+                        <div className={styles.accordian__body}>
                         <img 
                         className={styles.accordian__body_image}
                         src={medinfo_1}
@@ -90,15 +122,10 @@ function RomanInfo(){
                         className={styles.accordian__body_image}
                         src={medinfo_2}
                         />
-                        <img 
-                        className={styles.accordian__body_image}
-                        src={medinfo_3}
-                        />
-                        <img 
-                        className={styles.accordian__body_image}
-                        src={medinfo_4}
-                        />
                 </div>
+                    ) : null
+                }
+                
             </div>
         </article>
 
