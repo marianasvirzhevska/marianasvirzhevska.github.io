@@ -36,7 +36,7 @@ export const team = [
         name: 'Kateryna', 
         surname: 'Boiko', 
         page: false, 
-        role: 'role', 
+        role: 'Novice writer', 
         character: 'Ashley Greene', 
         image: kate,
         video: kateVideo,
@@ -46,7 +46,7 @@ export const team = [
             weight: 128, 
             hair: 'Light brown', 
             eyes: 'Green', 
-            other: 'Always with book in her hands', 
+            other: 'Always with book in her hands or with headphones', 
             indent: 'P 108574.LU.12.435', 
             linkedin: 'https://www.linkedin.com/in/kateryna-boiko-10b2a0195/', 
             github: 'https://github.com/KaterinaBoiko'
