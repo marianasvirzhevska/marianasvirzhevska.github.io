@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useRouteMatch } from "react-router";
-import { team } from "../../team";
-import KateInfo from "./KateInfo";
-// import RomanInfo from './RomanInfo';
-import styles from "./index.module.scss";
-import video from "../../assets/video/alex.mp4";
-import Alex from "./SashaInfo/Alex";
+import { useRouteMatch } from 'react-router';
+import { team } from '../../team';
+import RomanInfo from './RomanInfo';
+import styles from './index.module.scss';
+import video from '../../assets/video/alex.mp4'
+import Alex from './SashaInfo/Alex';
+
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -41,7 +41,6 @@ function PersonInfo() {
         return (
             <>
                 {/* Put your personalize page here */}
-                {/*<RomanInfo />*/}
                 <Alex member={member} details={details} />
             </>
         );
@@ -170,12 +169,17 @@ function PersonInfo() {
                         </div>
                     </div>
                 </div>
+     
+            {member.name === 'Aleksandr' ? (
+                <p>Your additional component will be here</p>
+            ): null}
 
-                {member.name === "Aleksandr" ? (
-                    <p>Your additional component will be here</p>
-                ) : null}
+            {member.name === 'Roman' ? (
+                <RomanInfo />
+            ): null}
 
-                {member.name === "Kateryna" ? <KateInfo /> : null}
+            {member.name === "Kateryna" ? <KateInfo /> : null}
+
             </div>
         </div>
     );
