@@ -45,25 +45,25 @@ export const team = [
             github: 'https://github.com/marianasvirzhevska'
         }
     },
-        {
-            id: '3', 
-            name: 'Mariana', 
-            surname: 'Svirzhevska', 
-            page: false, 
-            role: 'Private investigator', 
-            character: 'Brawne Lamia', 
-            image: mariana, 
-            info: 'A private investigator from the industrial, high-gravity planet of Lusus.',
-            details: {
-                height: 174, 
-                weight: 132, 
-                hair: 'Brown', 
-                eyes: 'Brown', 
-                other: 'Not available', 
-                indent: 'P 108574.LU.00.104', 
-                linkedin: 'link', 
-                github: 'https://github.com/marianasvirzhevska'
-            }
+    {
+        id: '3', 
+        name: 'Mariana', 
+        surname: 'Svirzhevska', 
+        page: false, 
+        role: 'Private investigator', 
+        character: 'Brawne Lamia', 
+        image: mariana, 
+        info: 'A private investigator from the industrial, high-gravity planet of Lusus.',
+        details: {
+            height: 174, 
+            weight: 132, 
+            hair: 'Brown', 
+            eyes: 'Brown', 
+            other: 'Not available', 
+            indent: 'P 108574.LU.00.104', 
+            linkedin: 'link', 
+            github: 'https://github.com/marianasvirzhevska'
+        }
     },
     {
         id: '4', 
@@ -101,7 +101,7 @@ export const team = [
             eyes: 'Grey', 
             other: 'Not available', 
             indent: 'P 383011.AC.00.843', 
-            linkedin: 'link', 
+            linkedin: 'https://www.linkedin.com/in/oleksandr-bezdorozhev-3ab9031a4/', 
             github: 'https://github.com/lightcraf'
         }
     }
