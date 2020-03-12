@@ -8,6 +8,7 @@ import Alex from './SashaInfo/Alex';
 import LamiaInfo from './LamiaInfo';
 import RomanInfo from './RomanInfo';
 import KateInfo from "./KateInfo";
+import NarutoInfo from "./Naruto";
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -177,7 +178,13 @@ function PersonInfo() {
                         <LamiaInfo />
                 ): null}
 
-                {member.name === "Kateryna" ? <KateInfo /> : null}
+                {member.name === "Kateryna" ? (
+                    <KateInfo /> 
+                ): null}
+
+                {member.name === "Nykyta" ? (
+                    <NarutoInfo /> 
+                ): null}
 
             </div>
 
