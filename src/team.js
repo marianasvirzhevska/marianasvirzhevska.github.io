@@ -69,11 +69,12 @@ export const team = [
         id: '4', 
         name: 'Roman',
         surname: 'Tsakhlo', 
-        page: true,  
+        page: false,
         role: 'role', 
         character: '', 
         image: roman,
         info: 'Lenar Hoyt was a Jesuit priest, famous for his role in the final Shrike pilgrimage',
+        customBackground: true,
         details: {
             height: 174, 
             weight: 132, 
