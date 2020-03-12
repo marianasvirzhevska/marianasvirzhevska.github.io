@@ -61,7 +61,7 @@ function Alex(props) {
                             <p className={styles.characterDataProp}>Related links:</p>
                             <p className={styles.characterDataValue}>
                                 <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>GitHub</a>
-                                <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>LinkedIn</a>
+                                <a href={`${props.details.linkedin}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>LinkedIn</a>
                             </p>
                         </div>
                     </div>

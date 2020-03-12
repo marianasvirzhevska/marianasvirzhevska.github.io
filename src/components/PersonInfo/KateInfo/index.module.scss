@@ -1,5 +1,4 @@
 .wrapper {
-    background: linear-gradient(to bottom, rgb(53, 87, 86), rgb(6, 37, 33));
     padding: 70px;
     position: relative;
 }
@@ -8,6 +7,7 @@
     padding: 50px;
     background-color: rgba(250, 237, 237, 0.822);
     box-shadow: 10px 10px 10px rgb(27, 27, 27);
+    min-width: 70%;
 }
 
 .box_area {
@@ -40,7 +40,7 @@
     }
 
     100% {
-        transform: translateY(-1200px) rotate(360deg);
+        transform: translateY(-1100px) rotate(360deg);
         opacity: 0;
     }
 }
