@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Alex.module.scss';
-import video from '../../../assets/video/alex.mp4'
+import video from '../../../assets/video/alex.mov'
 
 function Alex(props) {
     const playVideo = ({target}) => {

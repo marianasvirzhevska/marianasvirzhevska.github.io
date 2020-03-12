@@ -110,6 +110,7 @@ ul {
         letter-spacing: 2px;
         line-height: 22px;
         margin: 0;
+        text-rendering: optimizeSpeed;
         padding-bottom: 60px;
         @media (max-width: 768px) {
             padding-bottom: 40px;
