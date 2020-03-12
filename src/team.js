@@ -1,8 +1,13 @@
 import kate from './assets/images/member-1.png';
+import kateVideo from './assets/video/ashlee.mov';
 import nykyta from './assets/images/member-2.png';
+import nykytaVideo from './assets/video/nikita.mp4';
 import roman from './assets/images/member-3.png';
+import romanVideo from './assets/video/roma.mp4';
 import mariana from './assets/images/member-4.png';
+import marianaVideo from './assets/video/mariana.mp4';
 import alex from './assets/images/member-5.png';
+import alexVideo from './assets/video/alex.mp4';
 
 export const team = [
     {
@@ -13,15 +18,16 @@ export const team = [
         role: 'role', 
         character: 'Naruto Uzumaki', 
         image: nykyta, 
-        info: 'IMSF’s geochemist and hydrologist who supervises all water operations at Olympus Town',
+        video: nykytaVideo, 
+        info: 'The reveler full of egoism. It is a mystery why Hyperion have chosen him.',
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Additional info not available', 
-            indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
+            height: 178, 
+            weight: 154, 
+            hair: 'Black', 
+            eyes: 'Blue', 
+            other: 'He has come to the meeting after party and barely understands what is going on', 
+            indent: 'Z 777777.77.77.777', 
+            linkedin: 'linkedin.com/in/mykyta-hlukhov-6019051a4 ', 
             github: 'https://github.com/marianasvirzhevska'
         }
     },
@@ -33,16 +39,17 @@ export const team = [
         role: 'role', 
         character: 'Ashley Greene', 
         image: kate,
-        info: 'Ashley Greene is 20 and she lives on the planet Zhytomberd.',
+        video: kateVideo,
+        info: '20 year old student from Zhytomberd, novice writer, dreams of writing a book about this mission',
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Not available', 
-            indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
-            github: 'https://github.com/marianasvirzhevska'
+            height: 168, 
+            weight: 128, 
+            hair: 'Light brown', 
+            eyes: 'Green', 
+            other: 'Always with book in her hands', 
+            indent: 'P 108574.LU.12.435', 
+            linkedin: 'https://www.linkedin.com/in/kateryna-boiko-10b2a0195/', 
+            github: 'https://github.com/KaterinaBoiko'
         }
     },
     {
@@ -53,6 +60,7 @@ export const team = [
         role: 'Private investigator', 
         character: 'Brawne Lamia', 
         image: mariana, 
+        video: marianaVideo,
         info: 'A private investigator from the industrial, high-gravity planet of Lusus.',
         details: {
             height: 174, 
@@ -61,7 +69,7 @@ export const team = [
             eyes: 'Brown', 
             other: 'Not available', 
             indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
+            linkedin: 'https://www.linkedin.com/in/mariana-svirzhevska-09404a149/',
             github: 'https://github.com/marianasvirzhevska'
         }
     },
@@ -69,20 +77,21 @@ export const team = [
         id: '4', 
         name: 'Roman',
         surname: 'Tsakhlo', 
-        page: true,  
-        role: 'role', 
-        character: '', 
+        page: false,  
+        role: 'Developer of syntetic heart', 
+        character: 'Christoff Amoscott', 
         image: roman,
-        info: 'Lenar Hoyt was a Jesuit priest, famous for his role in the final Shrike pilgrimage',
+        info: 'Christoff works in staff of Developing Syntetic Cardiovascular System Department. He develops a syntetic heart.',
+        customBackground: true,
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Additional info not available', 
-            indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
-            github: 'https://github.com/marianasvirzhevska'
+            height: 184, 
+            weight: 137, 
+            hair: 'Blonde', 
+            eyes: 'Green', 
+            other: 'Christoff develops a syntetic heart', 
+            indent: 'P 108574.CA.00.104', 
+            linkedin: 'https://www.linkedin.com/in/roman-tsakhlo-37a1b1167/', 
+            github: 'https://github.com/roma-bjj'
         }
     },
     {
@@ -93,7 +102,8 @@ export const team = [
         role: 'Scholar and professor', 
         character: 'Alex Callisto',
         image: alex,
-        info: 'A scholar and professor from Barnard\'s World',
+        video: alexVideo,
+        info: 'He would cross any line to find out the truth.',
         details: {
             height: 180, 
             weight: 176, 

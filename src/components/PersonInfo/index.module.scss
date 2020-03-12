@@ -184,10 +184,36 @@
     color: $white;
     text-decoration: underline;
     margin-right: 30px; 
+
+    &:hover{
+        transform: scale(1.1);
+        text-shadow: black 10px 5px 5px;
+        text-decoration: none;
+    }
+
+    &:active{
+        color: $dark-font;
+    }
 }
 
 .video {
     position: absolute;
     width: 100%;
     top: -10%;
+}
+
+.customBackground {
+    background-image: url(./RomanInfo/images/roma-background.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: animatebackground 100s linear infinite;
+    
+}
+
+@keyframes animatebackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0;}
 }
