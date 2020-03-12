@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { useRouteMatch } from "react-router";
 import { team } from "../../team";
 import styles from './index.module.scss';
-import video from '../../assets/video/alex.mp4';
 
 import Alex from './SashaInfo/Alex';
 import LamiaInfo from './LamiaInfo';
 import RomanInfo from './RomanInfo';
 import KateInfo from "./KateInfo";
+import NarutoInfo from "./Naruto";
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -178,7 +178,13 @@ function PersonInfo() {
                         <LamiaInfo />
                 ): null}
 
-                {member.name === "Kateryna" ? <KateInfo /> : null}
+                {member.name === "Kateryna" ? (
+                    <KateInfo /> 
+                ): null}
+
+                {member.name === "Nykyta" ? (
+                    <NarutoInfo /> 
+                ): null}
 
             </div>
 
