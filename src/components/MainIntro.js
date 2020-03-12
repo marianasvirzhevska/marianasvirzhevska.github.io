@@ -15,10 +15,10 @@ function MainIntro () {
             <div>
               <div className="hero__body">
                 <h1 className="hero__title">Hyperion</h1>
+                <h5 className="hero__subtitle">Interactive Movie</h5>
                 <p className="hero__description">
-                  In the 34th century, humanity has thousands of planets, it is
-                  called Hegemony. Hegemony is extremely advanced and powerful,
-                  but there are some problems ...
+                  34th century A.D. humanity has inhabited thousands of planets, and is ruled by Artificial Intelligence
+                  called Hyperion. Peace and harmony reign, till one day...
                 </p>
                 <Link to="/about" className="hero__btn">
                   Start journey

@@ -46,7 +46,7 @@ function Main() {
                                 Humanity lives in a world of technology, fully
                                 relying on Hyperion, but all happiness can not
                                 last forever. Suddenly a message was received
-                                from Hyperion "Hegemony stands on the brink of
+                                from Hyperion "Hegemony and humanity itself stands on the brink of
                                 destruction" with a brief and illogical
                                 instruction said only squad which consists of
                                 Ashley Green, Naruto Uzumaki, Christoff
@@ -59,16 +59,15 @@ function Main() {
                         <div className="story__text">
                             <h3 className="story__title">E.P.A.M.</h3>
                             <p className="story__description">
-                                The crew must go to the planet E.P.A.M., which
-                                does not obey Hyperion. Team members are not
+                                The crew should visit mysterious planet E.P.A.M., existence of
+                                which was unknown till today, where they will find further instructions. Team members are not
                                 familiar with each other and have radically
-                                different characters. How can they save
-                                Hegemony? Will humanity survive? You must select
-                                a team member and help them accomplish the
-                                mission. The plot of the interactive movie will
-                                depend entirely on your choice.
+                                different characters. What will they find on that planet? Will humanity be saved and do we deserve this? It's up to You to find out these and other questions.
                             </p>
-                            <p className="story__description">Save Hegemony!</p>
+                            <p className="story__description"> Select
+                                a team member and help crew to accomplish the
+                                mission. The plot of the interactive movie will
+                                depend entirely on your choices, so choose wisely. And don't forget the true power of humanity depends on cohesion. Good luck!</p>
                         </div>
                         <div className="story__images">
                             <div className="story__images-wrapper">
