@@ -1,8 +1,13 @@
 import kate from './assets/images/member-1.png';
+import kateVideo from './assets/video/ashlee.mov';
 import nykyta from './assets/images/member-2.png';
+import nykytaVideo from './assets/video/nikita.mp4';
 import roman from './assets/images/member-3.png';
+import romanVideo from './assets/video/roma.mp4';
 import mariana from './assets/images/member-4.png';
+import marianaVideo from './assets/video/mariana.mp4';
 import alex from './assets/images/member-5.png';
+import alexVideo from './assets/video/alex.mp4';
 
 export const team = [
     {
@@ -13,6 +18,7 @@ export const team = [
         role: 'role', 
         character: 'Naruto Uzumaki', 
         image: nykyta, 
+        video: nykytaVideo, 
         info: 'The reveler full of egoism. It is a mystery why Hyperion have chosen him.',
         details: {
             height: 178, 
@@ -33,6 +39,7 @@ export const team = [
         role: 'role', 
         character: 'Ashley Greene', 
         image: kate,
+        video: kateVideo,
         info: '20 year old student from Zhytomberd, novice writer, dreams of writing a book about this mission',
         details: {
             height: 168, 
@@ -53,6 +60,7 @@ export const team = [
         role: 'Private investigator', 
         character: 'Brawne Lamia', 
         image: mariana, 
+        video: marianaVideo,
         info: 'A private investigator from the industrial, high-gravity planet of Lusus.',
         details: {
             height: 174, 
@@ -73,6 +81,7 @@ export const team = [
         role: 'role', 
         character: 'Christoff Amoscott', 
         image: roman,
+        video: romanVideo,
         info: 'Medical scientist whose passion is to help people.',
         customBackground: true,
         details: {
@@ -94,6 +103,7 @@ export const team = [
         role: 'Scholar and professor', 
         character: 'Alex Callisto',
         image: alex,
+        video: alexVideo,
         info: 'He would cross any line to find out the truth.',
         details: {
             height: 180, 

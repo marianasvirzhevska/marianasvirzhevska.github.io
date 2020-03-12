@@ -66,7 +66,7 @@ function PersonInfo() {
                             <div className={styles.bracketsTop} />
                             <div className={styles.image}>
                                 <video
-                                    src={video}
+                                    src={member.video}
                                     className={styles.video}
                                     onMouseEnter={playVideo}
                                     onMouseLeave={pauseVideo}
