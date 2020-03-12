@@ -101,7 +101,7 @@ function RomanInfo(){
         <div className={styles.containerGallery}> 
         <article className={styles.accordian}>
             <div className={styles.accordian__card}>
-                <div className={styles.accordian__header}>
+                <div className={`${styles.accordian__header} ${styles.accordian__headerImage}`}>
                     <h3 className={styles.accordian__header_title}>Gallery</h3>
                 </div>
                     <div className={styles.accordian__bodyImage}></div>

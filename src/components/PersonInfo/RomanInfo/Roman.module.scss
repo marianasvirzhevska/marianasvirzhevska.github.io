@@ -1,6 +1,21 @@
 $bgHeader: #171963;
 $colorHeader: #dfdfe8;
 
+@mixin bgTitle {
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+@keyframes animatebackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0;}
+}
+
 @keyframes show {
 	0% {
 	opacity: 0;
@@ -16,12 +31,12 @@ $colorHeader: #dfdfe8;
 	from, to, 40% {
 		background-image:url(./images/medinfo-1.jpg);
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+        background-size: 100% 100%;
 	}
 	50%, 90% {
 		background-image:url(./images/medinfo-2.jpg);
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+        background-size: 100% 100%;
 	}
 }
 
@@ -54,13 +69,14 @@ $colorHeader: #dfdfe8;
 
 .accordian__header {
     max-width: 100%;
-    position: relative;
     padding: 2%;
     background-color: black;
+    border-radius: .1em;
+    opacity: .8;
 
         &.blue {
+            @include bgTitle;
             cursor: pointer;
-            background-color: $bgHeader;
         }
 
         &.black {
@@ -79,19 +95,34 @@ $colorHeader: #dfdfe8;
     padding: 5%;
     display: block;
     animation: show 2s ease;
+    background: #8e9eab;
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    border-radius: .1em;
+    opacity: .8;
+    
 
      &_p {
          font-size: 1rem;
+         font-weight: 700;
          line-height: 1.5rem;
          color: black;
          margin: 1%;
      }
 }
 
+.accordian__headerImage {
+    border-radius: .5em;
+    opacity: .5;
+}
+
 .accordian__bodyImage {
+    border-radius: .5em;
+    background: black;
     animation: slider 10s infinite cubic-bezier(.76,-0.54,.27,.76);
+    opacity: .7;
 	width: 100%;
-	height: 50vh;
+    height: 50vh;
 }
 
 

@@ -38,7 +38,7 @@ function PersonInfo() {
 
     return(
         <div className={styles.personal}>
-            <div className={styles.hero}>
+            <div className={`${styles.hero} ${member.customBackground && member.customBackground ? styles.customBackground : null}`}>
                 <div className="container">
                     <Link to="/about"className="back-button"><span/>Back</Link>
                     <div className={styles.infoCard}>
@@ -106,15 +106,17 @@ function PersonInfo() {
                         </div>
                     </div>
                 </div>
-            </div>
-            
+     
             {member.name === 'Aleksandr' ? (
                 <p>Your additional component will be here</p>
             ): null}
 
+
             {member.name === 'Roman' ? (
                 <RomanInfo />
             ): null}
+
+            </div>
         </div>
     )
 }

@@ -74,6 +74,7 @@ export const team = [
         character: 'Christoff Amoscott', 
         image: roman,
         info: 'Christoff works in staff of Developing Syntetic Cardiovascular System Department. He develops a syntetic heart.',
+        customBackground: true,
         details: {
             height: 184, 
             weight: 137, 
