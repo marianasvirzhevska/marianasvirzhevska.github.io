@@ -6,6 +6,7 @@ import { team } from '../../team';
 import styles from './index.module.scss';
 import video from '../../assets/video/alex.mp4'
 import Alex from './SashaInfo/Alex';
+import LamiaInfo from './LamiaInfo';
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -41,7 +42,7 @@ function PersonInfo() {
         <div className={styles.personal}>
             <div className={styles.hero}>
                 <div className="container">
-                    <Link to="/about"className="back-button"><span/>Back</Link>
+                    <Link to="/about" className="back-button"><span/>Back</Link>
                     <div className={styles.infoCard}>
                         <div className={styles.imageWrapper}>
                             <div className={styles.bracketsTop}/> 
@@ -107,12 +108,19 @@ function PersonInfo() {
                         </div>
                     </div>
                 </div>
-            </div>
+            {/*</div>*/}
 
      
             {member.name === 'Aleksandr' ? (
                 <p>Your additional component will be here</p>
             ): null}
+
+            {member.name === 'Mariana' ? (
+                    <LamiaInfo />
+            ): null}
+
+            </div>
+
         </div>
     )
 }
