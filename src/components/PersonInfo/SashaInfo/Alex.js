@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Alex.module.scss';
 import video from '../../../assets/video/alex.mp4'
@@ -27,7 +27,7 @@ function Alex(props) {
                             <video className={styles.characterVideo} 
                                 onMouseEnter={playVideo} 
                                 onMouseLeave={pauseVideo} 
-                                onEnded={videoEnded}>
+                                onEnded={videoEnded} muted="muted">
                                     <source src={video} type="video/mp4"/>
                                     Your browser does not support the video tag.
                             </video>
