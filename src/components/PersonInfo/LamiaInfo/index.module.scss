@@ -2,7 +2,7 @@
 @import '../../../styles/_variables.scss';
 
 .root {
-  padding: 60px 0;
+  padding: 0 0 60px;
 }
 
 .content {
@@ -25,5 +25,54 @@
   background: rgba(255,255,255, 0.15);
   & > span {
     text-transform: uppercase;
+  }
+}
+
+.dashboard {
+  padding: 10px 0 30px;
+  display: flex;
+}
+
+.skillItem {
+  padding: 0 26px 0 0;
+  flex: 0 0.20 20%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  @media (max-width: 1024px) {
+    padding: 0 12px 0 0;
+  }
+  @media (max-width: 767px) {
+    position: relative;
+    padding: 0 12px 0 0;
+    overflow: hidden;
+  }
+}
+
+.range {
+  background: rgba(255,255,255, 0.15);
+  padding: 8px 5px;
+  text-align: center;
+  color: $white;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  @media (max-width: 460px) {
+    font-size: $small-font;
+  }
+}
+
+.label {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  @media (max-width: 767px) {
+    font-size: $small-font;
+  }
+  @media (max-width: 460px) {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
