@@ -13,7 +13,7 @@ const squaresStyle = [
         animationDuration: "10s"
     },
     {
-        left: "70%",
+        left: "80%",
         width: "100px",
         height: "100px",
         animationDelay: "7.5s"

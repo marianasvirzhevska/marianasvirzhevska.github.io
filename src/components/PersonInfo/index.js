@@ -10,6 +10,8 @@ import LamiaInfo from './LamiaInfo';
 import RomanInfo from './RomanInfo';
 import KateInfo from "./KateInfo";
 
+
+
 function PersonInfo() {
     const { params } = useRouteMatch();
     const id = params.id;
