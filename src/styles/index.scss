@@ -26,26 +26,11 @@ ul {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
-  @media (max-width: 768px) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  max-width: 1080px;
+  padding: 0 40px;
+  margin: 0 auto;
   @media (max-width: 320px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  @media (min-width: 768px) {
-    width: 100%;
-    max-width: 100%;
-  }
-  @media (min-width: 992px) {
-    width: 944px;
-  }
-  @media (min-width: 1200px) {
-    width: 1080px;
+    padding: 0 20px;
   }
 }
 
@@ -82,7 +67,7 @@ ul {
         font-size: 96px;
         color: #fff;
         text-transform: uppercase;
-        letter-spacing: 0.5em;;
+        letter-spacing: 0.5em;
         margin: 0 -0.5em 35px 0;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         animation: animateLetters 3s ease-out;
