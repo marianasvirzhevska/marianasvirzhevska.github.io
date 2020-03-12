@@ -47,10 +47,11 @@
 .pie_chart{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     .pie {
         display: inline-block;
-        width: 200px;
+        min-width: 200px;
         height: 200px;
         border-radius: 50%;
         margin: 0 40px;
