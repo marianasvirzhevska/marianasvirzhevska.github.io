@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRouteMatch } from 'react-router';
-import { Link } from 'react-router-dom';
 import { team } from '../../team';
 // import RomanInfo from './RomanInfo';
 import styles from './index.module.scss';

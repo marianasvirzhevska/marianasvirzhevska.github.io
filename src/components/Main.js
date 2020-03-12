@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import MainIntro from "./MainIntro";
+
 import story_1 from "../assets/images/story-1.jpg";
 import story_2 from "../assets/images/story-2.jpg";
 import story_3 from "../assets/images/story-3.jpg";
@@ -8,18 +11,7 @@ import story_4 from "../assets/images/story-4.jpg";
 function Main() {
     return (
         <>
-            <section className="hero">
-                <div className="hero__body">
-                    <h1 className="hero__title">Hyperion</h1>
-                    <p className="hero__description">
-                        In the 29th century, the Hegemony of Man comprises
-                        thousands of planets connected by farcaster portals.
-                    </p>
-                    <Link to="/about" className="hero__btn">
-                        Start journey
-                    </Link>
-                </div>
-            </section>
+            <MainIntro/>
             <div className="container">
                 <section className="story">
                     <div className="story__wrapper align-left">
