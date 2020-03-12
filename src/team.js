@@ -27,7 +27,7 @@ export const team = [
             eyes: 'Blue', 
             other: 'He has come to the meeting after party and barely understands what is going on', 
             indent: 'Z 777777.77.77.777', 
-            linkedin: 'linkedin.com/in/mykyta-hlukhov-6019051a4 ', 
+            linkedin: 'https://www.linkedin.com/in/mykyta-hlukhov-6019051a4 ', 
             github: 'https://github.com/marianasvirzhevska'
         }
     },
