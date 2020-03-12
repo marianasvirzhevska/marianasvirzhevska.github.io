@@ -2,12 +2,18 @@
     background: linear-gradient(to bottom, rgb(53, 87, 86), rgb(6, 37, 33));
     padding: 70px;
     position: relative;
+    @media(max-width: 460px) {
+        padding: 30px;
+    }
 }
 
 .container {
     padding: 50px;
     background-color: rgba(250, 237, 237, 0.822);
     box-shadow: 10px 10px 10px rgb(27, 27, 27);
+    @media(max-width: 460px) {
+        padding: 25px;
+    }
 }
 
 .box_area {
