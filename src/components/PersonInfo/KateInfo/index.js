@@ -111,15 +111,15 @@ function KateInfo() {
                 <div className={styles.pie_chart}>
                     <div className={styles.pie} style={getStyleForPie()}></div>
                     <div className={styles.pie_denotation}>
-                        {dataForStyle.map(el => (
-                            <div>
+                        {dataForStyle.map((el, index) => (
+                            <div key={index}>
                                 <div className={styles.denotation_color} style={{backgroundColor: el.color}}></div>
                                 <span className={styles.paragraph}>{el.text}</span>
                             </div>
                         ))}
                     </div>
                 </div>
-                <p className={styles.paragraph + " " + styles.primary}>
+                <p className={`${styles.paragraph} ${styles.primary}`}>
                     Primary skill: focus on the audience. Since Ashley is used
                     to be the center of attention she knows, if the audience is
                     pleasured you will be treated right.
@@ -135,8 +135,8 @@ function KateInfo() {
                 </ul>
                 <p className={styles.paragraph}></p>
                 <ul className={styles.box_area}>
-                    {boxesStyle.map(el => (
-                        <li style={el}></li>
+                    {boxesStyle.map((el, index) => (
+                        <li style={el} key={index}></li>
                     ))}
                 </ul>
             </div>
