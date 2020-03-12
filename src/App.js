@@ -19,7 +19,7 @@ function App() {
                 <ScrollToTop>
                     <Suspense fallback={null}>
                         <Switch>
-                            <Route path="/main">
+                            <Route exact path="/">
                                 <Main />
                             </Route>
                             <Route exact path="/about">
@@ -28,7 +28,6 @@ function App() {
                             <Route exact path="/person-info/:id">
                                 <PersonInfo />
                             </Route>
-                            <Redirect exact path="/" to="/main" />
                         </Switch>
                         <Footer />
                     </Suspense>

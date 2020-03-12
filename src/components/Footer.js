@@ -8,10 +8,10 @@ function Footer() {
                 <p className="footer__cotyright">&copy;2020 Hyperion Mission, All Rights Reserved.</p>
                 <ul className="footer__nav">
                     <li className="footer__nav-item">
-                        <Link to="/main" className="footer__nav-link">Home</Link>
+                        <Link to="/" className="footer__nav-link">Home</Link>
                     </li>
                     <li className="footer__nav-item">
-                        <Link to="/about" className="footer__nav-link">About</Link>
+                        <Link to="/about" className="footer__nav-link">Team</Link>
                     </li>
                     <li className="footer__nav-item">
                         <a href="https://www.figma.com/file/GYckFgBjbuJWbPUBDg0sUA/Hyperion?node-id=0%3A1" target="_blank" rel="noopener noreferrer" className="footer__nav-link">Workflow</a>

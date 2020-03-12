@@ -437,7 +437,7 @@ ul {
 
 .about {
     &__hero {
-        background: url("../assets/images/team-hero-bg.png") center no-repeat;
+        background: url("../assets/images/team-hero-bg.jpg") center no-repeat;
         background-size: cover;
         @media (max-width: 460px) {
             background: url("../assets/images/team-hero-bg-mobile.png") center no-repeat;
@@ -484,7 +484,7 @@ ul {
     }
 
     &__team {
-        background: url("../assets/images/team-fixed-bg.png") top no-repeat fixed;
+        background: url("../assets/images/team-fixed-bg.jpg") top no-repeat fixed;
         background-size: cover;
     }
 
