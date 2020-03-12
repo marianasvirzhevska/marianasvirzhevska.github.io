@@ -9,7 +9,7 @@ function About() {
       <div className="about">
         <div className="about__hero">
           <div className="about__container container">
-            <Link to="/main" className="back-button">
+            <Link to="/" className="back-button">
               <span />
               Back
             </Link>

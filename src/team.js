@@ -1,13 +1,13 @@
 import kate from './assets/images/member-1.png';
 import kateVideo from './assets/video/ashlee.mov';
 import nykyta from './assets/images/member-2.png';
-import nykytaVideo from './assets/video/nikita.mp4';
+import nykytaVideo from './assets/video/nikita.mov';
 import roman from './assets/images/member-3.png';
-import romanVideo from './assets/video/roma.mp4';
+import romanVideo from './assets/video/roma.mov';
 import mariana from './assets/images/member-4.png';
-import marianaVideo from './assets/video/mariana.mp4';
+import marianaVideo from './assets/video/mariana.mov';
 import alex from './assets/images/member-5.png';
-import alexVideo from './assets/video/alex.mp4';
+import alexVideo from './assets/video/alex.mov';
 
 export const team = [
     {
@@ -81,6 +81,7 @@ export const team = [
         role: 'Developer of syntetic heart', 
         character: 'Christoff Amoscott', 
         image: roman,
+        video: romanVideo,
         info: 'Christoff works in staff of Developing Syntetic Cardiovascular System Department. He develops a syntetic heart.',
         customBackground: true,
         details: {
