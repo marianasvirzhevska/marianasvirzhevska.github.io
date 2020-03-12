@@ -343,6 +343,12 @@ ul {
         padding: 5px 0;
         font-size: 13px;
         color: #bcccd6;
+
+        &:hover,
+        &:focus,
+        &:active{
+          opacity: 0.7;
+        }
     }
 }
 

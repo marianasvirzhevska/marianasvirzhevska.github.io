@@ -1,22 +1,18 @@
 import React from "react";
 import styles from "./index.module.scss";
-import {squaresStyle, dataForChart} from './KateData';
+import { squaresStyle, dataForChart } from "./KateData";
 
 function getStyleForPie() {
-    const a = "conic-gradient(" + dataForChart.map(el => {
-        const {color, degrees} = el;
-        return `${color} 0 ${degrees},`;
-    });
-    console.log(a);
-    let result = "conic-gradient(";
-    for (let i = 0; i < dataForChart.length; i++) {
-        result += `${dataForChart[i].color} 0 ${dataForChart[i].degrees},`;
-    }
-    result = result.replace(/.$/, ")");
-    return { backgroundImage: result };
+    return {
+        backgroundImage:
+            "conic-gradient(" +
+            dataForChart.map(({ color, degrees }) => `${color} 0 ${degrees}`) +
+            ")"
+    };
 }
 
 function KateInfo() {
+    const getStyle = getStyleForPie();
     return (
         <div className={styles.wrapper}>
             <div className={`container ${styles.container}`}>
@@ -51,12 +47,17 @@ function KateInfo() {
                 </p>
                 <p className={styles.paragraph}>Ashley Greene consists of:</p>
                 <div className={styles.pie_chart}>
-                    <div className={styles.pie} style={getStyleForPie()}></div>
+                    <div className={styles.pie} style={getStyle}></div>
                     <div className={styles.pie_denotation}>
                         {dataForChart.map((el, index) => (
                             <div key={index}>
-                                <div className={styles.denotation_color} style={{backgroundColor: el.color}}></div>
-                                <span className={styles.paragraph}>{el.text}</span>
+                                <div
+                                    className={styles.denotation_color}
+                                    style={{ backgroundColor: el.color }}
+                                ></div>
+                                <span className={styles.paragraph}>
+                                    {el.text}
+                                </span>
                             </div>
                         ))}
                     </div>
