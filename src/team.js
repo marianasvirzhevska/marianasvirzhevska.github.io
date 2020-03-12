@@ -33,16 +33,16 @@ export const team = [
         role: 'role', 
         character: 'Ashley Greene', 
         image: kate,
-        info: 'Ashley Greene is 20 and she lives on the planet Zhytomberd.',
+        info: '20 year old student from Zhytomberd, novice writer, dreams of writing a book about this mission',
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Not available', 
-            indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
-            github: 'https://github.com/marianasvirzhevska'
+            height: 168, 
+            weight: 128, 
+            hair: 'Light brown', 
+            eyes: 'Green', 
+            other: 'Always with book in her hands', 
+            indent: 'P 108574.LU.12.435', 
+            linkedin: 'https://www.linkedin.com/in/kateryna-boiko-10b2a0195/', 
+            github: 'https://github.com/KaterinaBoiko'
         }
     },
     {
@@ -69,11 +69,12 @@ export const team = [
         id: '4', 
         name: 'Roman',
         surname: 'Tsakhlo', 
-        page: true,  
+        page: false,
         role: 'role', 
         character: '', 
         image: roman,
         info: 'Lenar Hoyt was a Jesuit priest, famous for his role in the final Shrike pilgrimage',
+        customBackground: true,
         details: {
             height: 174, 
             weight: 132, 
