@@ -49,7 +49,9 @@ function PersonInfo() {
                                 <video src={video} className={styles.video}
                                        onMouseEnter={playVideo}
                                        onMouseLeave={pauseVideo}
-                                       onEnded={videoEnded}/>
+                                       onEnded={videoEnded}
+                                       muted="muted"
+                                       />
                             </div>
                             <div className={styles.bracketsBottom}/> 
                         </div>
