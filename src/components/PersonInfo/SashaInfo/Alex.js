@@ -33,7 +33,7 @@ function Alex(props) {
                             </video>
                         </div>
                         <div className={styles.characterWrapper}>
-                            <h3 className={styles.characterName}>{props.member.character}</h3>
+                            <h3 className={`${styles.flicker} ${styles.characterName}`}>{props.member.character}</h3>
                             <p className={styles.characterOccupetion}>{props.member.role}</p>
                             <p className={styles.characterRealName}>{props.member.name} {props.member.surname}</p>
                             <ul className={styles.characterAppearance}>
