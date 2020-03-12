@@ -184,6 +184,16 @@
     color: $white;
     text-decoration: underline;
     margin-right: 30px; 
+
+    &:hover{
+        transform: scale(1.1);
+        text-shadow: black 10px 5px 5px;
+        text-decoration: none;
+    }
+
+    &:active{
+        color: $dark-font;
+    }
 }
 
 .video {
