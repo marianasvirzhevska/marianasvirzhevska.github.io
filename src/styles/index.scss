@@ -26,16 +26,27 @@ ul {
 }
 
 .container {
-  max-width: 1080px;
-  padding: 0 40px;
-  margin: 0 auto;
-  @media (max-width: 320px) {
-    padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  @media (max-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
-}
-
-.backgroundWrapper {
-  background: black;
+  @media (max-width: 320px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+  @media (min-width: 992px) {
+    width: 944px;
+  }
+  @media (min-width: 1200px) {
+    width: 1080px;
+  }
 }
 
 .hero {
@@ -46,7 +57,6 @@ ul {
     background: url('../assets/images/Hero-bg.jpg') center no-repeat;
     background-size: cover;
     animation: animateBackground 3s;
-    
 
     &__starfieldAnimation {
       position: absolute;
@@ -72,7 +82,7 @@ ul {
         font-size: 96px;
         color: #fff;
         text-transform: uppercase;
-        letter-spacing: 0.5em;
+        letter-spacing: 0.5em;;
         margin: 0 -0.5em 35px 0;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         animation: animateLetters 3s ease-out;
@@ -85,23 +95,6 @@ ul {
         }
         
     }
-
-    &__subtitle {
-      font-size: 20px;
-      color: #fff;
-      letter-spacing: 0.5em;;
-      margin: 0 -0.5em 35px 0;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      animation: animateLetters 3s ease-out;
-      @media (max-width: 768px) {
-          font-size: 68px;
-          margin: 0 0 20px;
-      }
-      @media (max-width: 600px) {
-          font-size: 45px;
-      }
-      
-  }
 
     &__description {
         max-width: 740px;
@@ -127,15 +120,6 @@ ul {
         border: 2px solid #7dbde5;
         border-radius: 4px;
         white-space: nowrap;
-        transition: 0.5s ease;
-
-        &:hover,
-        &:focus,
-        &:active{
-          transform: scale(1.1);
-          color: white;
-          border: 2px solid #b6d6ea;
-        }
         @media (max-width: 600px) {
             font-size: 16px;
             padding: 14px 25px 15px;
@@ -319,15 +303,6 @@ ul {
         border-radius: 4px;
         white-space: nowrap;
         border: 2px solid #98afbe;
-        transition: 0.5s ease;
-
-        &:hover,
-        &:focus,
-        &:active{
-          transform: scale(1.1);
-          color: white;
-          border: 2px solid #b6d6ea;
-        }
       @media (max-width: 460px) {
         font-size: 16px;
         padding: 14px 25px 15px;
@@ -381,12 +356,6 @@ ul {
         padding: 5px 0;
         font-size: 13px;
         color: #bcccd6;
-
-        &:hover,
-        &:focus,
-        &:active{
-          opacity: 0.7;
-        }
     }
 }
 
@@ -505,32 +474,14 @@ ul {
 
 
 
-@keyframes animateLetters {
-  from {
-    letter-spacing: normal;
-  }
+@keyframes animateLetters { 
+  from  { letter-spacing: normal;
+ } to { letter-spacing: 0.5em; }  }
 
-  to {
-    letter-spacing: 0.5em;
-  }
-}
+ @keyframes animateText { 
+  from  { opacity: 0;
+ } to { opacity: 1; }  }
 
-@keyframes animateText {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animateBackground {
-  from {
-    opacity: 0.5;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
+ @keyframes animateBackground { 
+  from  { opacity: 0.5;
+ } to { opacity: 1; }  }

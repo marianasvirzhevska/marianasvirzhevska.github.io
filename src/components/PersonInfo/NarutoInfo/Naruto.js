@@ -1,72 +1,46 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Alex.module.scss';
-import video from '../../../assets/video/alex.mp4'
+import styles from './Naruto.module.scss';
 
-function Alex(props) {
-    const playVideo = ({target}) => {
-        target.play();
-    };
-
-    const pauseVideo = ({target}) => {
-        target.currentTime = 0;
-        target.pause();
-    };
-
-    const videoEnded = ({target}) => {
-        target.currentTime = 0;
-    };
-
+function Main() {
     return (
         <>
             <div className={styles.main}>
-                <div className={`container ${styles.mainWrapper}`}>
-                    <Link to="/about" className="back-button"><span></span>Back</Link>
-                    <div className={`${styles.character} ${styles.slideInRight} ${styles.animated}`}>
+                <div className={`container ${styles.relative}`}>
+                    <Link to="/main" className="back-button">Back</Link>
+                    <div className={styles.character}>
                         <div className={styles.characterWrapper}>
-                            <video className={styles.characterVideo} 
-                                onMouseEnter={playVideo} 
-                                onMouseLeave={pauseVideo} 
-                                onEnded={videoEnded} muted="muted">
-                                    <source src={video} type="video/mp4"/>
-                                    Your browser does not support the video tag.
-                            </video>
+                            <div className={styles.characterPhoto}></div>
                         </div>
                         <div className={styles.characterWrapper}>
-                            <h3 className={styles.characterName}>{props.member.character}</h3>
-                            <p className={styles.characterOccupetion}>{props.member.role}</p>
-                            <p className={styles.characterRealName}>{props.member.name} {props.member.surname}</p>
+                            <h3 className={styles.characterName}>Alex Callisto</h3>
+                            <p className={styles.characterOccupetion}>Scholar and professor</p>
                             <ul className={styles.characterAppearance}>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Height:</p>
-                                    <p className={styles.characterDataValue}>{props.details.height} cm</p>
+                                    <p className={styles.characterDataValue}>180 cm</p>
                                 </li>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Weight:</p>
-                                    <p className={styles.characterDataValue}>{props.details.weight} lbs</p>
+                                    <p className={styles.characterDataValue}>180 lbs</p>
                                 </li>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Hair color:</p>
-                                    <p className={styles.characterDataValue}>{props.details.hair}</p>
+                                    <p className={styles.characterDataValue}>Red</p>
                                 </li>
                                 <li className={styles.characterAppearanceItem}>
                                     <p className={styles.characterDataProp}>Eye color:</p>
-                                    <p className={styles.characterDataValue}>{props.details.eyes}</p>
+                                    <p className={styles.characterDataValue}>Gray</p>
                                 </li>
                             </ul>
                             <p className={styles.characterDataProp}>Other identifying data:</p>
-                            <p className={styles.characterDataValue}>{props.details.other}</p>
+                            <p className={styles.characterDataValue}>Not available</p>
                             <p className={styles.characterDataProp}>Identification NO.:</p>
-                            <p className={styles.characterDataValue}>{props.details.indent}</p>
-                            <p className={styles.characterDataProp}>Related links:</p>
-                            <p className={styles.characterDataValue}>
-                                <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>GitHub</a>
-                                <a href={`${props.details.linkedin}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>LinkedIn</a>
-                            </p>
+                            <p className={styles.characterDataValue}>P383011.AC.00.843</p>
                         </div>
                     </div>
-                    
-                    <div className={`${styles.characterMainText} ${styles.slideInLeft} ${styles.animated}`}>
+
+                    <div className={styles.characterMainText}>
                         <p className={styles.characterText}>Dr. Alex Callisto obtained his
                             Ph.D. in the Department of Physics at the Bristol University.
                             Alex has served as a lead scientist for 25 years in the physics
@@ -94,4 +68,4 @@ function Alex(props) {
     )
 }
 
-export default Alex;
+export default Main;

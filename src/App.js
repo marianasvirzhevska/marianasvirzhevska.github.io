@@ -1,18 +1,16 @@
-import React, { Suspense, lazy } from "react";
+import React from 'react';
 import {
     BrowserRouter as Router,
     Route,
     Redirect,
-    Switch
-} from "react-router-dom";
-import ScrollToTop from "./ScrollToTop";
-
-const Main = lazy(() => import("./components/Main"));
-const About = lazy(() => import("./components/About"));
-const PersonInfo = lazy(() => import("./components/PersonInfo"));
-const Footer = lazy(() => import("./components/Footer"));
+    Switch } from 'react-router-dom';
+import Main from './components/Main';
+import About from './components/About';
+import PersonInfo from './components/PersonInfo';
+import Footer from './components/Footer';
 
 function App() {
+
     return (
         <div className="App">
             <Router>
@@ -20,16 +18,16 @@ function App() {
                     <Suspense fallback={null}>
                         <Switch>
                             <Route exact path="/">
-                                <Main />
+                                <Main/>
                             </Route>
                             <Route exact path="/about">
-                                <About />
+                                <About/>
                             </Route>
                             <Route exact path="/person-info/:id">
-                                <PersonInfo />
+                                <PersonInfo/>
                             </Route>
                         </Switch>
-                        <Footer />
+                        <Footer/>
                     </Suspense>
                 </ScrollToTop>
             </Router>
