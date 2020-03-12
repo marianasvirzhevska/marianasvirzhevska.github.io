@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useRouteMatch } from "react-router";
 import { team } from "../../team";
 import styles from './index.module.scss';
-import video from '../../assets/video/alex.mp4';
 
 import Alex from './SashaInfo/Alex';
 import LamiaInfo from './LamiaInfo';
