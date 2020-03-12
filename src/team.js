@@ -61,7 +61,7 @@ export const team = [
             eyes: 'Brown', 
             other: 'Not available', 
             indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
+            linkedin: 'https://www.linkedin.com/in/mariana-svirzhevska-09404a149/',
             github: 'https://github.com/marianasvirzhevska'
         }
     },
