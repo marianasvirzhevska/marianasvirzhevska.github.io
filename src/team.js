@@ -45,35 +45,36 @@ export const team = [
             github: 'https://github.com/KaterinaBoiko'
         }
     },
-        {
-            id: '3', 
-            name: 'Mariana', 
-            surname: 'Svirzhevska', 
-            page: false, 
-            role: 'Private investigator', 
-            character: 'Brawne Lamia', 
-            image: mariana, 
-            info: 'A private investigator from the industrial, high-gravity planet of Lusus.',
-            details: {
-                height: 174, 
-                weight: 132, 
-                hair: 'Brown', 
-                eyes: 'Brown', 
-                other: 'Not available', 
-                indent: 'P 108574.LU.00.104', 
-                linkedin: 'link', 
-                github: 'https://github.com/marianasvirzhevska'
-            }
+    {
+        id: '3', 
+        name: 'Mariana', 
+        surname: 'Svirzhevska', 
+        page: false, 
+        role: 'Private investigator', 
+        character: 'Brawne Lamia', 
+        image: mariana, 
+        info: 'A private investigator from the industrial, high-gravity planet of Lusus.',
+        details: {
+            height: 174, 
+            weight: 132, 
+            hair: 'Brown', 
+            eyes: 'Brown', 
+            other: 'Not available', 
+            indent: 'P 108574.LU.00.104', 
+            linkedin: 'link', 
+            github: 'https://github.com/marianasvirzhevska'
+        }
     },
     {
         id: '4', 
         name: 'Roman',
         surname: 'Tsakhlo', 
-        page: true,  
+        page: false,
         role: 'role', 
         character: '', 
         image: roman,
         info: 'Lenar Hoyt was a Jesuit priest, famous for his role in the final Shrike pilgrimage',
+        customBackground: true,
         details: {
             height: 174, 
             weight: 132, 
@@ -89,20 +90,20 @@ export const team = [
         id: '5', 
         name: 'Aleksandr', 
         surname: 'Bezdorozhev', 
-        page: false, 
-        role: 'role', 
+        page: true, 
+        role: 'Scholar and professor', 
         character: 'Alex Callisto',
         image: alex,
-        info: 'A Jewish scholar and professor from Barnard\'s World',
+        info: 'A scholar and professor from Barnard\'s World',
         details: {
-            height: 174, 
-            weight: 132, 
-            hair: 'Brown', 
-            eyes: 'Brown', 
-            other: 'Additional info not available', 
-            indent: 'P 108574.LU.00.104', 
-            linkedin: 'link', 
-            github: 'https://github.com/marianasvirzhevska'
+            height: 180, 
+            weight: 176, 
+            hair: 'Red', 
+            eyes: 'Grey', 
+            other: 'Not available', 
+            indent: 'P 383011.AC.00.843', 
+            linkedin: 'https://www.linkedin.com/in/oleksandr-bezdorozhev-3ab9031a4/', 
+            github: 'https://github.com/lightcraf'
         }
     }
 ];
