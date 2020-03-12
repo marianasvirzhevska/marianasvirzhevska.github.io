@@ -1,41 +1,29 @@
-import React, { Suspense, lazy } from "react";
+import React from 'react';
 import {
     BrowserRouter as Router,
     Route,
     Redirect,
-    Switch
-} from "react-router-dom";
-import ScrollToTop from "./ScrollToTop";
-
-const Main = lazy(() => import("./components/Main"));
-const About = lazy(() => import("./components/About"));
-const PersonInfo = lazy(() => import("./components/PersonInfo"));
-const Footer = lazy(() => import("./components/Footer"));
+    Switch } from 'react-router-dom';
+import Main from './components/Main';
+import About from './components/About';
+import PersonInfo from './components/PersonInfo';
+import Footer from './components/Footer';
 
 function App() {
+
     return (
-        <div className="App">
-            <Router>
-                <ScrollToTop>
-                    <Suspense fallback={null}>
-                        <Switch>
-                            <Route path="/main">
-                                <Main />
-                            </Route>
-                            <Route exact path="/about">
-                                <About />
-                            </Route>
-                            <Route exact path="/person-info/:id">
-                                <PersonInfo />
-                            </Route>
-                            <Redirect exact path="/" to="/main" />
-                        </Switch>
-                        <Footer />
-                    </Suspense>
-                </ScrollToTop>
-            </Router>
-        </div>
-    );
+    <div className="App">
+        <Router>
+            <Switch>
+                <Route  path='/main' component={Main}/>
+                <Route exact path='/about' component={About}/>
+                <Route exact path='/person-info/:id' component={PersonInfo}/>
+                <Redirect exact path='/' to='/main'/>
+            </Switch>
+            <Footer />
+        </Router>
+    </div>
+  );
 }
 
 export default App;
