@@ -47,6 +47,10 @@
   @media (max-width: 460px) {
     min-height: 250px;
   }
+  
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .details {
