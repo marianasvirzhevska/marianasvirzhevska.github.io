@@ -42,7 +42,6 @@ function PersonInfo() {
     if (member.page) {
         return (
             <>
-                {/* Put your personalize page here */}
                 <Alex member={member} details={details} />
             </>
         );
