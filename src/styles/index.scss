@@ -66,6 +66,9 @@ ul {
         text-align: center;
         z-index: 1;
         animation: animateText 8s;
+        @media (max-width: 600px) {
+            padding: 0 20px;
+        }
     }
 
     &__title {
@@ -81,7 +84,7 @@ ul {
             margin: 0 0 20px;
         }
         @media (max-width: 600px) {
-            font-size: 45px;
+            font-size: 32px;
         }
         
     }
@@ -98,7 +101,7 @@ ul {
           margin: 0 0 20px;
       }
       @media (max-width: 600px) {
-          font-size: 45px;
+          font-size: 22px;
       }
       
   }

@@ -8,6 +8,10 @@
         position: relative;
         padding-top: 60px;
     }
+
+    @media(max-width: 460px) {
+        padding: 0 0 30px;
+    }
 }
 
 .character {
