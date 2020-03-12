@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useRouteMatch } from 'react-router';
-import { Link } from 'react-router-dom';
 import { team } from '../../team';
 import RomanInfo from './RomanInfo';
 import styles from './index.module.scss';
 import video from '../../assets/video/alex.mp4'
+import Alex from './SashaInfo/Alex';
 
 function PersonInfo() {
     const { params } = useRouteMatch();
@@ -13,10 +14,24 @@ function PersonInfo() {
     const { name, surname, role, character, details } = member;
     const { height, weight, hair, eyes, other, indent, linkedin, github } = details;
 
+    const playVideo = ({target}) => {
+        target.play();
+    };
+
+    const pauseVideo = ({target}) => {
+        target.currentTime = 0;
+        target.pause();
+    };
+
+    const videoEnded = ({target}) => {
+        target.currentTime = 0;
+    };
+
     if (member.page) {
         return (
             <>
-                Put your personalize page here
+                {/* Put your personalize page here */}
+                <Alex member={member} details={details} />
             </>
         )
     }
@@ -30,7 +45,12 @@ function PersonInfo() {
                         <div className={styles.imageWrapper}>
                             <div className={styles.bracketsTop}/> 
                             <div className={styles.image}>
-                                <video src={video}></video>
+                                <video src={video} className={styles.video}
+                                       onMouseEnter={playVideo}
+                                       onMouseLeave={pauseVideo}
+                                       onEnded={videoEnded}
+                                       muted="muted"
+                                       />
                             </div>
                             <div className={styles.bracketsBottom}/> 
                         </div>
@@ -87,7 +107,7 @@ function PersonInfo() {
                     </div>
                 </div>
             </div>
-    
+            
             {member.name === 'Aleksandr' ? (
                 <p>Your additional component will be here</p>
             ): null}
