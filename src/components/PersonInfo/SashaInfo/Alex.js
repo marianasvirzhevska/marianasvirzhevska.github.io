@@ -4,15 +4,33 @@ import styles from './Alex.module.scss';
 import video from '../../../assets/video/alex.mp4'
 
 function Alex(props) {
-    console.log(props);
+    const playVideo = ({target}) => {
+        target.play();
+    };
+
+    const pauseVideo = ({target}) => {
+        target.currentTime = 0;
+        target.pause();
+    };
+
+    const videoEnded = ({target}) => {
+        target.currentTime = 0;
+    };
+
     return (
         <>
             <div className={styles.main}>
                 <div className={`container ${styles.mainWrapper}`}>
-                    <Link to="/main" className="back-button"><span></span>Back</Link>
-                    <div className={`${styles.character} ${styles.slideInDown} ${styles.animated}`}>
+                    <Link to="/about" className="back-button"><span></span>Back</Link>
+                    <div className={`${styles.character} ${styles.slideInRight} ${styles.animated}`}>
                         <div className={styles.characterWrapper}>
-                            <video src={video} className={styles.characterVideo}></video>
+                            <video className={styles.characterVideo} 
+                                onMouseEnter={playVideo} 
+                                onMouseLeave={pauseVideo} 
+                                onEnded={videoEnded}>
+                                    <source src={video} type="video/mp4"/>
+                                    Your browser does not support the video tag.
+                            </video>
                         </div>
                         <div className={styles.characterWrapper}>
                             <h3 className={styles.characterName}>{props.member.character}</h3>
@@ -43,12 +61,12 @@ function Alex(props) {
                             <p className={styles.characterDataProp}>Related links:</p>
                             <p className={styles.characterDataValue}>
                                 <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>GitHub</a>
-                                <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>Linkedin</a>
+                                <a href={`${props.details.github}`} target="_blank" rel="noopener noreferrer" className={styles.characterLink}>LinkedIn</a>
                             </p>
                         </div>
                     </div>
                     
-                    <div className={`${styles.characterMainText} ${styles.slideInUp} ${styles.animated}`}>
+                    <div className={`${styles.characterMainText} ${styles.slideInLeft} ${styles.animated}`}>
                         <p className={styles.characterText}>Dr. Alex Callisto obtained his
                             Ph.D. in the Department of Physics at the Bristol University.
                             Alex has served as a lead scientist for 25 years in the physics
