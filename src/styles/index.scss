@@ -56,31 +56,44 @@ ul {
     min-height: 100vh; // view height
     background: url('../assets/images/Hero-bg.jpg') center no-repeat;
     background-size: cover;
+    animation: animateBackground 3s;
+
+    &__starfieldAnimation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+}
 
     &__body {
+        position: relative;
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        z-index: 1;
+        animation: animateText 8s;
     }
 
     &__title {
         font-size: 96px;
         color: #fff;
         text-transform: uppercase;
-        letter-spacing: 32px;
-        margin: 0 0 35px;
+        letter-spacing: 0.5em;;
+        margin: 0 -0.5em 35px 0;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        animation: animateLetters 3s ease-out;
         @media (max-width: 768px) {
             font-size: 68px;
-            letter-spacing: 5px;
             margin: 0 0 20px;
         }
         @media (max-width: 600px) {
             font-size: 45px;
-            letter-spacing: 8px;
         }
+        
     }
 
     &__description {
@@ -458,3 +471,17 @@ ul {
         }
     }
 }
+
+
+
+@keyframes animateLetters { 
+  from  { letter-spacing: normal;
+ } to { letter-spacing: 0.5em; }  }
+
+ @keyframes animateText { 
+  from  { opacity: 0;
+ } to { opacity: 1; }  }
+
+ @keyframes animateBackground { 
+  from  { opacity: 0.5;
+ } to { opacity: 1; }  }

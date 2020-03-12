@@ -1,0 +1,75 @@
+.main {
+    background: url('../../../assets/images/planet-alex.jpg') center top no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.character {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &Photo {
+        width: 200px;
+        height: 300px;
+        background-color: gray;
+    }
+
+    &Wrapper {
+        background-color: rgba(0,0,0,0.55);
+        color: #fff;
+        padding: 25px;
+    }
+
+    &Name {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &Occupetion {
+        font-size: 18px;
+    }
+
+    &Appearance {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &AppearanceItem {
+        width: 50%;
+    }
+
+    &DataProp {
+        color: #cecece;
+        text-transform: uppercase;
+        margin: 18px 0 4px 0;
+    }
+
+    &DataValue {
+        color: #fff;
+        margin: 0;
+    }
+
+    &MainText {
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        padding: 25px;
+    }
+
+    &Text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        text-indent: 50px;
+    }
+}
